@@ -1,0 +1,46 @@
+Microsoft Windows [Version 10.0.22631.5189]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\xampp\apache\bin>openssl genrsa -out server.key 2048
+Generating RSA private key, 2048 bit long modulus (2 primes)
+.................................................+++++
+.............+++++
+e is 65537 (0x010001)
+
+C:\xampp\apache\bin>openssl req -new -key server.key -out server.csr
+Can't open C:\Apache24\conf/openssl.cnf for reading, No such file or directory
+17704:error:02001003:system library:fopen:No such process:crypto\bio\bss_file.c:69:fopen('C:\Apache24\conf/openssl.cnf','r')
+17704:error:2006D080:BIO routines:BIO_new_file:no such file:crypto\bio\bss_file.c:76:
+
+C:\xampp\apache\bin>openssl req -new -key server.key -out server.csr -config "C:\xampp\apache\conf\openssl.cnf"
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:IN
+State or Province Name (full name) [Some-State]:Maharastra
+Locality Name (eg, city) []:Nashik
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:assign
+Organizational Unit Name (eg, section) []:SSl
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:sanapvaibhav8767@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:Vaibhav@119
+An optional company name []:
+
+C:\xampp\apache\bin>openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+Signature ok
+subject=C = IN, ST = Maharastra, L = Nashik, O = assign, OU = SSl, CN = localhost, emailAddress = sanapvaibhav8767@gmail.com
+Getting Private key
+
+C:\xampp\apache\bin>openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+Signature ok
+subject=C = IN, ST = Maharastra, L = Nashik, O = assign, OU = SSl, CN = localhost, emailAddress = sanapvaibhav8767@gmail.com
+Getting Private key
+
+C:\xampp\apache\bin>

@@ -1,0 +1,16 @@
+[KRyLack Archive Password Recovery Project Data]
+Version Created=3.70.69
+EncryptedFile=C:\Users\Vaibhav Sanap\Desktop\Last.zip
+CurrentPass=abc
+CharsSLatin=1
+CharsCLatin=1
+CharsSpace=0
+CharsDigits=1
+CharsSymbols=1
+CharsCustom=1
+Charset=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789[]{}`':;<>,./|\?~!@#$%^&*"-_+=()
+RecoveryType=1
+MinPassLen=1
+MaskChar=?
+Mask=
+Dictionary=C:\Program Files (x86)\KRyLack Archive Password Recovery\default_english.kpd
